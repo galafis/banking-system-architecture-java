@@ -1,0 +1,9 @@
+graph TD
+    A[Cliente] -->|Faz requisições| B(API Gateway)
+    B --> C{Serviço de Conta}
+    B --> D{Serviço de Transação}
+    C --> E[Banco de Dados de Contas]
+    D --> F[Banco de Dados de Transações]
+    C -->|Comunica-se com| D
+    D -->|Comunica-se com| C
+

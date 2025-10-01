@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking System Architecture (Java)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1, h2, h3 {
+            color: #0056b3;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px 0;
+        }
+        pre {
+            background: #eee;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            font-family: "Courier New", Courier, monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Banking System Architecture (Java)</h1>
+        <p>Este é um projeto de demonstração para uma arquitetura de sistema bancário robusta e escalável desenvolvida em Java com Spring Boot.</p>
+        
+        <h2>Diagrama de Arquitetura</h2>
+        <img src="docs/architecture_diagram.png" alt="Architecture Diagram">
+
+        <h2>Funcionalidades Principais</h2>
+        <ul>
+            <li>Gerenciamento de Contas</li>
+            <li>Operações Financeiras (Depósito, Saque, Transferência)</li>
+            <li>API RESTful</li>
+            <li>Persistência de Dados com JPA e H2 Database</li>
+            <li>Testes Unitários e de Integração</li>
+        </ul>
+
+        <h2>Como Usar a API</h2>
+        <p>A API pode ser acessada em <code>http://localhost:8080/api/accounts</code> após iniciar a aplicação. Abaixo estão alguns exemplos de requisições:</p>
+
+        <h3>Criar uma nova conta</h3>
+        <pre><code>curl -X POST http://localhost:8080/api/accounts \
+-H "Content-Type: application/json" \
+-d '{"accountNumber": "1001", "accountHolderName": "Gabriel Lafis", "balance": 1500.00}'</code></pre>
+
+        <h3>Depositar em uma conta</h3>
+        <pre><code>curl -X PUT http://localhost:8080/api/accounts/1001/deposit \
+-H "Content-Type: application/json" \
+-d '{"amount": 200.00}'</code></pre>
+
+        <h3>Sacar de uma conta</h3>
+        <pre><code>curl -X PUT http://localhost:8080/api/accounts/1001/withdraw \
+-H "Content-Type: application/json" \
+-d '{"amount": 150.00}'</code></pre>
+
+        <h3>Transferir entre contas</h3>
+        <pre><code>curl -X PUT http://localhost:8080/api/accounts/transfer \
+-H "Content-Type: application/json" \
+-d '{"fromAccountNumber": "1001", "toAccountNumber": "1002", "amount": 50.00}'</code></pre>
+
+        <p>Para mais detalhes, consulte o <a href="README.md">README.md</a> no repositório.</p>
+
+        <p><strong>Autor:</strong> Gabriel Demetrios Lafis</p>
+    </div>
+</body>
+</html>
+

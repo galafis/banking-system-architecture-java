@@ -57,13 +57,13 @@ Você pode usar ferramentas como `curl` ou Postman para interagir com a API.
 ```bash
 curl -X POST http://localhost:8080/api/accounts \
 -H "Content-Type: application/json" \
--d '{"accountNumber": "12345", "accountHolderName": "Gabriel Lafis", "balance": 1000.00}'
+-d '{"accountNumber": "1001", "accountHolderName": "Gabriel Lafis", "balance": 1500.00}'
 ```
 
 #### Depositar em uma conta
 
 ```bash
-curl -X PUT http://localhost:8080/api/accounts/12345/deposit \
+curl -X PUT http://localhost:8080/api/accounts/1001/deposit \
 -H "Content-Type: application/json" \
 -d '{"amount": 200.00}'
 ```
@@ -71,7 +71,7 @@ curl -X PUT http://localhost:8080/api/accounts/12345/deposit \
 #### Sacar de uma conta
 
 ```bash
-curl -X PUT http://localhost:8080/api/accounts/12345/withdraw \
+curl -X PUT http://localhost:8080/api/accounts/1001/withdraw \
 -H "Content-Type: application/json" \
 -d '{"amount": 150.00}'
 ```
@@ -81,7 +81,7 @@ curl -X PUT http://localhost:8080/api/accounts/12345/withdraw \
 ```bash
 curl -X PUT http://localhost:8080/api/accounts/transfer \
 -H "Content-Type: application/json" \
--d '{"fromAccountNumber": "12345", "toAccountNumber": "67890", "amount": 50.00}'
+-d '{"fromAccountNumber": "1001", "toAccountNumber": "1002", "amount": 50.00}'
 ```
 
 ### Testes
@@ -141,13 +141,13 @@ You can use tools like `curl` or Postman to interact with the API.
 ```bash
 curl -X POST http://localhost:8080/api/accounts \
 -H "Content-Type: application/json" \
--d '{"accountNumber": "12345", "accountHolderName": "Gabriel Lafis", "balance": 1000.00}'
+-d '{"accountNumber": "1001", "accountHolderName": "Gabriel Lafis", "balance": 1500.00}'
 ```
 
 #### Deposit into an account
 
 ```bash
-curl -X PUT http://localhost:8080/api/accounts/12345/deposit \
+curl -X PUT http://localhost:8080/api/accounts/1001/deposit \
 -H "Content-Type: application/json" \
 -d '{"amount": 200.00}'
 ```
@@ -155,7 +155,7 @@ curl -X PUT http://localhost:8080/api/accounts/12345/deposit \
 #### Withdraw from an account
 
 ```bash
-curl -X PUT http://localhost:8080/api/accounts/12345/withdraw \
+curl -X PUT http://localhost:8080/api/accounts/1001/withdraw \
 -H "Content-Type: application/json" \
 -d '{"amount": 150.00}'
 ```
@@ -165,7 +165,7 @@ curl -X PUT http://localhost:8080/api/accounts/12345/withdraw \
 ```bash
 curl -X PUT http://localhost:8080/api/accounts/transfer \
 -H "Content-Type: application/json" \
--d '{"fromAccountNumber": "12345", "toAccountNumber": "67890", "amount": 50.00}'
+-d '{"fromAccountNumber": "1001", "toAccountNumber": "1002", "amount": 50.00}'
 ```
 
 ### Tests
@@ -179,4 +179,5 @@ mvn test
 ---
 
 **Author:** Gabriel Demetrios Lafis
+
 
