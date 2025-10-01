@@ -1,0 +1,60 @@
+# Compiled class files
+*.class
+
+# Log files
+*.log
+*.logs
+
+# Package Files
+*.jar
+*.war
+*.ear
+
+# IDE-specific files and directories
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+.project
+.classpath
+.settings/
+
+# Build artifacts
+target/
+build/
+
+# Maven
+.mvn/wrapper/maven-wrapper.jar
+
+# Gradle
+.gradle/
+build/
+
+# OS-specific files
+.DS_Store
+thumbs.db
+
+# Environment variables
+.env
+.env.*
+
+# AEM specific
+crx-quickstart/
+
+# Eclipse specific
+.apt_generated
+.factorypath
+.springBeans
+
+# Temporary files
+*~
+
+# Test reports
+/surefire-reports/
+/test-output/
+
+# Others
+*.bak
+*.swp
+
