@@ -1,90 +1,223 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Banking System Architecture (Java)</title>
+    <title>Banking System Architecture (Java) - Documentação da API</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary-color: #0056b3;
+            --secondary-color: #007bff;
+            --text-color: #333;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --border-color: #e9ecef;
+            --code-bg: #e9ecef;
+        }
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             line-height: 1.6;
             margin: 0;
-            padding: 20px;
-            background-color: #f4f4f4;
-            color: #333;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
+
+        .header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .header h1 {
+            margin: 0;
+            font-weight: 700;
+        }
+
         .container {
-            max-width: 900px;
-            margin: auto;
-            background: #fff;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+            flex-grow: 1;
+        }
+
+        .card {
+            background: var(--card-bg);
             padding: 30px;
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            margin-bottom: 20px;
+            border: 1px solid var(--border-color);
         }
-        h1, h2, h3 {
-            color: #0056b3;
+
+        h2, h3 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 10px;
+            margin-top: 30px;
+            margin-bottom: 20px;
         }
+
+        h3 {
+            border-bottom: none;
+            padding-bottom: 0;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            color: var(--secondary-color);
+        }
+
         img {
             max-width: 100%;
             height: auto;
             display: block;
-            margin: 20px 0;
+            margin: 20px auto;
+            border-radius: 5px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
+
         pre {
-            background: #eee;
+            background: var(--code-bg);
             padding: 15px;
             border-radius: 5px;
             overflow-x: auto;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+            border: 1px solid #dee2e6;
         }
+
         code {
-            font-family: "Courier New", Courier, monospace;
+            font-family: 'Courier New', Courier, monospace;
+            color: #c22d2d;
+        }
+
+        pre code {
+            color: var(--text-color);
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        ul li {
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            background-color: var(--primary-color);
+            color: white;
+            box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+        }
+
+        .footer a {
+            color: white;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px auto;
+                padding: 0 15px;
+            }
+            .card {
+                padding: 20px;
+            }
+            .header h1 {
+                font-size: 1.8em;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="header">
         <h1>Banking System Architecture (Java)</h1>
-        <p>Este é um projeto de demonstração para uma arquitetura de sistema bancário robusta e escalável desenvolvida em Java com Spring Boot.</p>
-        
-        <h2>Diagrama de Arquitetura</h2>
-        <img src="docs/architecture_diagram.png" alt="Architecture Diagram">
+        <p>Documentação da API</p>
+    </div>
 
-        <h2>Funcionalidades Principais</h2>
-        <ul>
-            <li>Gerenciamento de Contas</li>
-            <li>Operações Financeiras (Depósito, Saque, Transferência)</li>
-            <li>API RESTful</li>
-            <li>Persistência de Dados com JPA e H2 Database</li>
-            <li>Testes Unitários e de Integração</li>
-        </ul>
+    <div class="container">
+        <div class="card">
+            <h2>Visão Geral do Projeto</h2>
+            <p>Este projeto demonstra uma arquitetura de sistema bancário robusta e escalável desenvolvida em Java, utilizando o framework Spring Boot. O objetivo é apresentar as melhores práticas de desenvolvimento de software, incluindo design de API RESTful, persistência de dados com JPA, testes unitários e de integração, e uma estrutura de projeto organizada.</p>
+            
+            <h3>Funcionalidades Principais</h3>
+            <ul>
+                <li><strong>Gerenciamento de Contas:</strong> Criação, consulta e exclusão de contas bancárias.</li>
+                <li><strong>Operações Financeiras:</strong> Depósito, saque e transferência entre contas.</li>
+                <li><strong>API RESTful:</strong> Interface bem definida para interação com o sistema.</li>
+                <li><strong>Persistência de Dados:</strong> Utilização de JPA com H2 Database (em memória para desenvolvimento/testes).</li>
+                <li><strong>Testes Abrangentes:</strong> Cobertura de testes para garantir a confiabilidade das operações.</li>
+            </ul>
 
-        <h2>Como Usar a API</h2>
-        <p>A API pode ser acessada em <code>http://localhost:8080/api/accounts</code> após iniciar a aplicação. Abaixo estão alguns exemplos de requisições:</p>
+            <h3>Arquitetura</h3>
+            <p>O sistema segue uma arquitetura de microserviços simplificada, com foco na separação de responsabilidades e modularidade. O diagrama abaixo ilustra os componentes principais e suas interações:</p>
+            <img src="hero_image.png" alt="Architecture Diagram">
+            <p>Para uma descrição mais detalhada da arquitetura, consulte o <a href="docs/architecture_diagram.png" target="_blank">diagrama completo</a>.</p>
+        </div>
 
-        <h3>Criar uma nova conta</h3>
-        <pre><code>curl -X POST http://localhost:8080/api/accounts \
+        <div class="card">
+            <h2>Como Usar a API</h2>
+            <p>A API pode ser acessada em <code>http://localhost:8080/api/accounts</code> após iniciar a aplicação localmente. Abaixo estão alguns exemplos de requisições que podem ser feitas usando ferramentas como <code>curl</code> ou Postman.</p>
+
+            <h3>Criar uma nova conta</h3>
+            <pre><code>curl -X POST http://localhost:8080/api/accounts \
 -H "Content-Type: application/json" \
 -d '{"accountNumber": "1001", "accountHolderName": "Gabriel Lafis", "balance": 1500.00}'</code></pre>
 
-        <h3>Depositar em uma conta</h3>
-        <pre><code>curl -X PUT http://localhost:8080/api/accounts/1001/deposit \
+            <h3>Depositar em uma conta</h3>
+            <pre><code>curl -X PUT http://localhost:8080/api/accounts/1001/deposit \
 -H "Content-Type: application/json" \
 -d '{"amount": 200.00}'</code></pre>
 
-        <h3>Sacar de uma conta</h3>
-        <pre><code>curl -X PUT http://localhost:8080/api/accounts/1001/withdraw \
+            <h3>Sacar de uma conta</h3>
+            <pre><code>curl -X PUT http://localhost:8080/api/accounts/1001/withdraw \
 -H "Content-Type: application/json" \
 -d '{"amount": 150.00}'</code></pre>
 
-        <h3>Transferir entre contas</h3>
-        <pre><code>curl -X PUT http://localhost:8080/api/accounts/transfer \
+            <h3>Transferir entre contas</h3>
+            <pre><code>curl -X PUT http://localhost:8080/api/accounts/transfer \
 -H "Content-Type: application/json" \
 -d '{"fromAccountNumber": "1001", "toAccountNumber": "1002", "amount": 50.00}'</code></pre>
 
-        <p>Para mais detalhes, consulte o <a href="README.md">README.md</a> no repositório.</p>
+            <p>Para mais detalhes sobre a configuração e execução do projeto, consulte o <a href="README.md" class="button">README.md do Repositório</a>.</p>
+        </div>
+    </div>
 
-        <p><strong>Autor:</strong> Gabriel Demetrios Lafis</p>
+    <div class="footer">
+        <p>Desenvolvido por Gabriel Demetrios Lafis | <a href="https://github.com/galafis/Banking-System-Architecture-Java" target="_blank">Ver no GitHub</a></p>
     </div>
 </body>
 </html>
-
