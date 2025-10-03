@@ -1,5 +1,9 @@
 # Banking System Architecture (Java)
 
+## 🖼️ Hero Image
+
+## 🖼️ Imagem Hero
+
 ![Hero Image](hero_image.png)
 
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)
@@ -22,11 +26,16 @@ Este projeto demonstra uma arquitetura de sistema bancário robusta e escalável
 -   **Persistência de Dados**: Utilização de JPA com H2 Database (em memória para desenvolvimento/testes).
 -   **Testes Abrangentes**: Cobertura de testes para garantir a confiabilidade das operações.
 
+### Architecture
+
+The system follows a simplified microservices architecture, focusing on separation of concerns and modularity. The diagram below illustrates the main components and their interactions:
+
 ### Arquitetura
 
 O sistema segue uma arquitetura de microserviços simplificada, com foco na separação de responsabilidades e modularidade. O diagrama abaixo ilustra os componentes principais e suas interações:
 
-![Diagrama de Arquitetura](docs/architecture_diagram.png)
+![Architecture Diagram](docs/architecture_diagram.png)
+
 
 ### Pré-requisitos
 
