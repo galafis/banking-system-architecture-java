@@ -6,13 +6,6 @@
 
 ![Hero Image](hero_image.png)
 
-![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)
-![Spring Boot](https://img.shields.io/badge/Spring_Boot-F2F4F9?style=for-the-badge&logo=spring-boot)
-![Maven](https://img.shields.io/badge/Apache_Maven-C71A36?style=for-the-badge&logo=apache-maven&logoColor=white)
-![H2 Database](https://img.shields.io/badge/H2_Database-000000?style=for-the-badge&logo=h2&logoColor=white)
-![JPA](https://img.shields.io/badge/JPA-6D2077?style=for-the-badge&logo=eclipse-persistence&logoColor=white)
-![Lombok](https://img.shields.io/badge/Lombok-FF0000?style=for-the-badge&logo=lombok&logoColor=white)
-![JUnit 5](https://img.shields.io/badge/JUnit5-25A162?style=for-the-badge&logo=junit5&logoColor=white)
 
 ## 🇧🇷 Português
 
