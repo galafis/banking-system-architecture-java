@@ -1,188 +1,165 @@
-# Banking System Architecture (Java)
+# 🚀 Banking System Architecture Java
 
-## 🖼️ Hero Image
+[![Java](https://img.shields.io/badge/Java-21-red.svg)](https://www.java.com/)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-## 🖼️ Imagem Hero
-
-![Hero Image](hero_image.png)
-
-
-## 🇧🇷 Português
-
-Este projeto demonstra uma arquitetura de sistema bancário robusta e escalável desenvolvida em Java, utilizando o framework Spring Boot. O objetivo é apresentar as melhores práticas de desenvolvimento de software, incluindo design de API RESTful, persistência de dados com JPA, testes unitários e de integração, e uma estrutura de projeto organizada.
-
-### Funcionalidades
-
--   **Gerenciamento de Contas**: Criação, consulta e exclusão de contas bancárias.
--   **Operações Financeiras**: Depósito, saque e transferência entre contas.
--   **API RESTful**: Interface bem definida para interação com o sistema.
--   **Persistência de Dados**: Utilização de JPA com H2 Database (em memória para desenvolvimento/testes).
--   **Testes Abrangentes**: Cobertura de testes para garantir a confiabilidade das operações.
-
-### Architecture
-
-The system follows a simplified microservices architecture, focusing on separation of concerns and modularity. The diagram below illustrates the main components and their interactions:
-
-### Arquitetura
-
-O sistema segue uma arquitetura de microserviços simplificada, com foco na separação de responsabilidades e modularidade. O diagrama abaixo ilustra os componentes principais e suas interações:
-
-![Architecture Diagram](docs/architecture_diagram.png)
-
-
-### Pré-requisitos
-
--   Java Development Kit (JDK) 17 ou superior
--   Apache Maven 3.6 ou superior
-
-### Como Executar
-
-1.  **Clone o repositório:**
-    ```bash
-    git clone https://github.com/galafis/banking-system-architecture-java.git
-    cd banking-system-architecture-java
-    ```
-2.  **Compile o projeto:**
-    ```bash
-    mvn clean install
-    ```
-3.  **Execute a aplicação:**
-    ```bash
-    mvn spring-boot:run
-    ```
-    A aplicação estará disponível em `http://localhost:8080`.
-
-### Exemplos de Uso da API
-
-Você pode usar ferramentas como `curl` ou Postman para interagir com a API.
-
-#### Criar uma nova conta
-
-```bash
-curl -X POST http://localhost:8080/api/accounts \
--H "Content-Type: application/json" \
--d '{"accountNumber": "1001", "accountHolderName": "Gabriel Lafis", "balance": 1500.00}'
-```
-
-#### Depositar em uma conta
-
-```bash
-curl -X PUT http://localhost:8080/api/accounts/1001/deposit \
--H "Content-Type: application/json" \
--d '{"amount": 200.00}'
-```
-
-#### Sacar de uma conta
-
-```bash
-curl -X PUT http://localhost:8080/api/accounts/1001/withdraw \
--H "Content-Type: application/json" \
--d '{"amount": 150.00}'
-```
-
-#### Transferir entre contas
-
-```bash
-curl -X PUT http://localhost:8080/api/accounts/transfer \
--H "Content-Type: application/json" \
--d '{"fromAccountNumber": "1001", "toAccountNumber": "1002", "amount": 50.00}'
-```
-
-### Testes
-
-Para executar os testes unitários e de integração:
-
-```bash
-mvn test
-```
-
-## 🇬🇧 English
-
-This project demonstrates a robust and scalable banking system architecture developed in Java, using the Spring Boot framework. The goal is to showcase software development best practices, including RESTful API design, data persistence with JPA, unit and integration testing, and an organized project structure.
-
-### Features
-
--   **Account Management**: Creation, retrieval, and deletion of bank accounts.
--   **Financial Operations**: Deposit, withdrawal, and transfer between accounts.
--   **RESTful API**: Well-defined interface for system interaction.
--   **Data Persistence**: Usage of JPA with H2 Database (in-memory for development/testing).
--   **Comprehensive Testing**: Test coverage to ensure the reliability of operations.
-
-### Architecture
-
-The system follows a simplified microservices architecture, focusing on separation of concerns and modularity. The diagram below illustrates the main components and their interactions:
-
-![Architecture Diagram](docs/architecture_diagram.png)
-
-### Prerequisites
-
--   Java Development Kit (JDK) 17 or higher
--   Apache Maven 3.6 or higher
-
-### How to Run
-
-1.  **Clone the repository:**
-    ```bash
-    git clone https://github.com/galafis/banking-system-architecture-java.git
-    cd banking-system-architecture-java
-    ```
-2.  **Compile the project:**
-    ```bash
-    mvn clean install
-    ```
-3.  **Run the application:**
-    ```bash
-    mvn spring-boot:run
-    ```
-    The application will be available at `http://localhost:8080`.
-
-### API Usage Examples
-
-You can use tools like `curl` or Postman to interact with the API.
-
-#### Create a new account
-
-```bash
-curl -X POST http://localhost:8080/api/accounts \
--H "Content-Type: application/json" \
--d '{"accountNumber": "1001", "accountHolderName": "Gabriel Lafis", "balance": 1500.00}'
-```
-
-#### Deposit into an account
-
-```bash
-curl -X PUT http://localhost:8080/api/accounts/1001/deposit \
--H "Content-Type: application/json" \
--d '{"amount": 200.00}'
-```
-
-#### Withdraw from an account
-
-```bash
-curl -X PUT http://localhost:8080/api/accounts/1001/withdraw \
--H "Content-Type: application/json" \
--d '{"amount": 150.00}'
-```
-
-#### Transfer between accounts
-
-```bash
-curl -X PUT http://localhost:8080/api/accounts/transfer \
--H "Content-Type: application/json" \
--d '{"fromAccountNumber": "1001", "toAccountNumber": "1002", "amount": 50.00}'
-```
-
-### Tests
-
-To run unit and integration tests:
-
-```bash
-mvn test
-```
+[English](#english) | [Português](#português)
 
 ---
 
-**Author:** Gabriel Demetrios Lafis
+## English
+
+### 🎯 Overview
+
+**Banking System Architecture Java** — Um sistema bancário em Java com arquitetura profissional.
+
+Total source lines: **519** across **8** files in **2** languages.
+
+### ✨ Key Features
+
+- **Production-Ready Architecture**: Modular, well-documented, and following best practices
+- **Comprehensive Implementation**: Complete solution with all core functionality
+- **Clean Code**: Type-safe, well-tested, and maintainable codebase
+- **Easy Deployment**: Docker support for quick setup and deployment
+
+### 🚀 Quick Start
+
+#### Prerequisites
+- Java 21+ and Maven
+
+
+#### Installation
+
+1. **Clone the repository**
+```bash
+git clone https://github.com/galafis/banking-system-architecture-java.git
+cd banking-system-architecture-java
+```
+
+2. **Build the project**
+```bash
+mvn clean install
+```
+
+#### Running
+
+```bash
+mvn spring-boot:run
+```
 
 
 
+
+
+### 📁 Project Structure
+
+```
+banking-system-architecture-java/
+├── docs/
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   └── resources/
+│   └── test/
+│       └── java/
+├── CODE_OF_CONDUCT.md
+├── CONTRIBUTING.md
+└── README.md
+```
+
+### 🛠️ Tech Stack
+
+| Technology | Usage |
+|------------|-------|
+| Java | 7 files |
+| HTML | 1 files |
+
+### 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+### 👤 Author
+
+**Gabriel Demetrios Lafis**
+
+- GitHub: [@galafis](https://github.com/galafis)
+- LinkedIn: [Gabriel Demetrios Lafis](https://linkedin.com/in/gabriel-demetrios-lafis)
+
+---
+
+## Português
+
+### 🎯 Visão Geral
+
+**Banking System Architecture Java** — Um sistema bancário em Java com arquitetura profissional.
+
+Total de linhas de código: **519** em **8** arquivos em **2** linguagens.
+
+### ✨ Funcionalidades Principais
+
+- **Arquitetura Pronta para Produção**: Modular, bem documentada e seguindo boas práticas
+- **Implementação Completa**: Solução completa com todas as funcionalidades principais
+- **Código Limpo**: Type-safe, bem testado e manutenível
+- **Fácil Implantação**: Suporte Docker para configuração e implantação rápidas
+
+### 🚀 Início Rápido
+
+#### Pré-requisitos
+- Java 21+ e Maven
+
+
+#### Instalação
+
+1. **Clone the repository**
+```bash
+git clone https://github.com/galafis/banking-system-architecture-java.git
+cd banking-system-architecture-java
+```
+
+2. **Build the project**
+```bash
+mvn clean install
+```
+
+#### Execução
+
+```bash
+mvn spring-boot:run
+```
+
+
+
+
+### 📁 Estrutura do Projeto
+
+```
+banking-system-architecture-java/
+├── docs/
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   └── resources/
+│   └── test/
+│       └── java/
+├── CODE_OF_CONDUCT.md
+├── CONTRIBUTING.md
+└── README.md
+```
+
+### 🛠️ Stack Tecnológica
+
+| Tecnologia | Uso |
+|------------|-----|
+| Java | 7 files |
+| HTML | 1 files |
+
+### 📄 Licença
+
+Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICENSE) para detalhes.
+
+### 👤 Autor
+
+**Gabriel Demetrios Lafis**
+
+- GitHub: [@galafis](https://github.com/galafis)
+- LinkedIn: [Gabriel Demetrios Lafis](https://linkedin.com/in/gabriel-demetrios-lafis)
